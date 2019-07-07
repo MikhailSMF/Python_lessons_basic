@@ -6,9 +6,20 @@
 # квадратами элементов исходного списка
 # [1, 2, 4, 0] --> [1, 4, 16, 0]
 
+lst = [1, 2, 4, 0]
+#lst_new = list(map(lambda x: x**2, lst))
+#print(lst_new)
+lst_new = [i**2 for i in lst]
+print(lst_new)
+
 # Задание-2:
 # Даны два списка фруктов.
 # Получить список фруктов, присутствующих в обоих исходных списках.
+
+lst1 = ['apricot','avocado','banana']
+lst2 = ['apricot','avocado','grapefruit','grapes']
+lst_union = [i for i in lst1 if i in lst2]
+print(lst_union)
 
 # Задание-3:
 # Дан список, заполненный произвольными числами.
@@ -16,3 +27,7 @@
 # + Элемент кратен 3
 # + Элемент положительный
 # + Элемент не кратен 4
+
+num = list(range(-10,10))
+new_num = [i for i in num if i%3 ==0 and i>0 and i%4 != 0 ]
+print(new_num)
