@@ -20,6 +20,8 @@ line = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysmNO'\
        'XiUWgsKQrDOeZoNlZNRvHnLgCmysUeKnVJXPFIzvdDyleXylnKBfLCjLHntltignbQoiQ'\
        'zTYwZAiRwycdlHfyHNGmkNqSwXUrxGc'
 
+import re
+print(re.findall('[a-z]+',line))
 
 # Задание-2:
 # Вывести символы в верхнем регистре, слева от которых находятся
@@ -45,9 +47,19 @@ line_2 = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysm'\
        'JFaXiUWgsKQrDOeZoNlZNRvHnLgCmysUeKnVJXPFIzvdDyleXylnKBfLCjLHntltignbQ'\
        'oiQzTYwZAiRwycdlHfyHNGmkNqSwXUrxGC'
 
+import re
+line_2_new = [i[2:-2] for i in re.findall('[a-z]{2}[A-Z]+[A-Z]{2}',line_2)]
+print(line_2_new)
+
 # Задание-3:
 # Напишите скрипт, заполняющий указанный файл (самостоятельно задайте имя файла)
 # произвольными целыми цифрами, в результате в файле должно быть
 # 2500-значное произвольное число.
 # Найдите и выведите самую длинную последовательность одинаковых цифр
 # в вышезаполненном файле.
+
+import os
+import random
+path = os.path.join(r'D:\Soft\PyCharm_prog','test.txt')
+with open(path, 'w', encoding='UTF-8') as f:
+    f.write(str(random.randrange(10**2500, 10**2501)))
