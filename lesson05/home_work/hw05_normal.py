@@ -9,6 +9,22 @@
 # При выборе пунктов 1, 3, 4 программа запрашивает название папки
 # и выводит результат действия: "Успешно создано/удалено/перешел",
 # "Невозможно создать/удалить/перейти"
+import lesson05.home_work.hw05_easy as hw05_easy
+import os
+while True:
+    your_choice = int(input('Что вы хотите сделать? \n Доступные действия: \n 1. Перейти в папку \n 2. Просмотреть содержимое текущей папки \n 3. Удалить папку \n 4. Создать папку \n 5. Текущая директория \n other. Прервать скрипт \n'))
+    if your_choice == 1:
+        hw05_easy.cd_dir()
+    elif your_choice == 2:
+        hw05_easy.ls_dir()
+    elif your_choice == 3:
+        hw05_easy.rm_your_dir()
+    elif your_choice == 4:
+        hw05_easy.mk_your_dir()
+    elif your_choice == 5:
+        print(os.getcwd())
+    else:
+        break
 
 # Для решения данной задачи используйте алгоритмы из задания easy,
 # оформленные в виде соответствующих функций,
