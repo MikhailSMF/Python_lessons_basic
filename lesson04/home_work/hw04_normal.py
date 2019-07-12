@@ -60,6 +60,6 @@ print(line_2_new)
 
 import os
 import random
-path = os.path.join(r'D:\Soft\PyCharm_prog','test.txt')
+path = os.path.join(os.getcwd()+'','test.txt')
 with open(path, 'w', encoding='UTF-8') as f:
     f.write(str(random.randrange(10**2500, 10**2501)))
