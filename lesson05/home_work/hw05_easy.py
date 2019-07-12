@@ -3,6 +3,25 @@
 # из которой запущен данный скрипт.
 # И второй скрипт, удаляющий эти папки.
 
+import os
+
+dir_path = os.getcwd()
+dir_name = (dir_path+'\\'+'dir_'+str(i) for i in range(1,10))
+dir_new = list(dir_name)
+
+def mk_dir():
+    for var in dir_new:
+        os.mkdir(var)
+
+def rm_dir():
+    for var in dir_new:
+        os.rmdir(var)
+
+#Создание созданных папок
+mk_dir()
+#Удаление созданных папок
+rm_dir()
+
 # Задача-2:
 # Напишите скрипт, отображающий папки текущей директории.
 
